@@ -1,6 +1,6 @@
-const { nanoid } = require("nanoid");
-const InvariantError = require("../../exceptions/InvariantError");
-const NotFoundError = require("../../exceptions/NotFoundError");
+const { nanoid } = require('nanoid');
+const InvariantError = require('../../exceptions/InvariantError');
+const NotFoundError = require('../../exceptions/NotFoundError');
 
 class NotesService {
   constructor() {
@@ -13,7 +13,7 @@ class NotesService {
     const updatedAt = createdAt;
 
     const newNote = {
-      title, tags, body, id, createdAt, updatedAt
+      title, tags, body, id, createdAt, updatedAt,
     };
 
     this._notes.push(newNote);
@@ -54,7 +54,7 @@ class NotesService {
       title,
       tags,
       body,
-      updatedAt
+      updatedAt,
     };
   }
 

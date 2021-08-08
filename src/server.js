@@ -10,18 +10,18 @@ const init = async () => {
     port: 5000,
     host: process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0',
     routes: {
-        cors: {
-          origin: ['*'],
-        },
+      cors: {
+        origin: ['*'],
       },
+    },
   });
 
   await server.register({
     plugin: notes,
     options: {
       service: notesService,
-      validator: NotesValidator
-    }
+      validator: NotesValidator,
+    },
   });
 
   await server.start();
